@@ -1,0 +1,42 @@
+{
+  "name": "aarjona1991.github.io",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "repository": "https://github.com/aarjona1991/aarjona1991.github.io.git",
+  "author": "aarjona1991 <aarjona1991@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"no tests\" && exit 0",
+    "test:cov": "echo \"no tests\" && exit 0",
+    "eject": "react-scripts eject",
+    "find-deadcode": "ts-prune | (! grep -v 'used in module')"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.4.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
