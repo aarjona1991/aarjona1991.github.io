@@ -2,17 +2,13 @@
 name: Deploy Portfolio to GitHub Pages
 
 on:
-  # Runs on pushes targeting the development branch (build only)
+  # Runs on pushes targeting development or main branches
   push:
-    branches: ["development"]
+    branches: ["development", "main"]
   
   # Runs on pull requests to development (build only)
   pull_request:
     branches: ["development"]
-  
-  # Runs when PR is merged to main (deploy to production)
-  push:
-    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
