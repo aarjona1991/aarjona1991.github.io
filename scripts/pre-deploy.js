@@ -5,12 +5,13 @@ const path = require('path');
 
 console.log('🔍 Pre-deployment verification...');
 
-// Check if required files exist
+// Check if required source files exist
 const requiredFiles = [
   'public/index.html',
   'src/index.tsx',
   'package.json',
-  'tailwind.config.js'
+  'tailwind.config.js',
+  'src/index.css'
 ];
 
 const missingFiles = requiredFiles.filter(file => !fs.existsSync(file));
@@ -21,20 +22,9 @@ if (missingFiles.length > 0) {
   process.exit(1);
 }
 
-// Check if build directory exists and is not empty
-if (!fs.existsSync('build') || fs.readdirSync('build').length === 0) {
-  console.error('❌ Build directory is missing or empty. Run "yarn build" first.');
-  process.exit(1);
-}
-
-// Check if CSS file exists
-if (!fs.existsSync('public/styles/output.css')) {
-  console.warn('⚠️  CSS file not found. Run "yarn watch" or "yarn build:production" first.');
-}
-
 // Check package.json for required scripts
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-const requiredScripts = ['build', 'start', 'clean'];
+const requiredScripts = ['build', 'start'];
 
 const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
 
@@ -44,10 +34,25 @@ if (missingScripts.length > 0) {
   process.exit(1);
 }
 
-// Check for environment variables
+// Check if src directory has React components
+const srcFiles = fs.readdirSync('src');
+const hasReactFiles = srcFiles.some(file => file.endsWith('.tsx') || file.endsWith('.jsx'));
+
+if (!hasReactFiles) {
+  console.error('❌ No React components found in src directory');
+  process.exit(1);
+}
+
+// Check for environment variables (optional)
 if (!fs.existsSync('.env')) {
-  console.warn('⚠️  .env file not found. Using default values from personalInfo.ts');
+  console.log('ℹ️  .env file not found. Using default values from personalInfo.ts');
+}
+
+// Check if public directory exists
+if (!fs.existsSync('public')) {
+  console.error('❌ Public directory not found');
+  process.exit(1);
 }
 
 console.log('✅ Pre-deployment verification passed!');
-console.log('🚀 Ready for deployment to GitHub Pages');
+console.log('🚀 Ready to build and deploy');
