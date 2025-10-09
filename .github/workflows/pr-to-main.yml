@@ -1,0 +1,40 @@
+# Workflow for handling PR merges to main branch
+name: PR Merge to Main
+
+on:
+  # Trigger when a PR is merged to main
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  # Check if PR was merged (not just closed)
+  check-merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    outputs:
+      is-merged: ${{ steps.check.outputs.merged }}
+    steps:
+      - name: Check if PR was merged
+        id: check
+        run: |
+          if [ "${{ github.event.pull_request.merged }}" == "true" ]; then
+            echo "merged=true" >> $GITHUB_OUTPUT
+            echo "✅ PR #${{ github.event.pull_request.number }} was merged to main"
+          else
+            echo "merged=false" >> $GITHUB_OUTPUT
+            echo "❌ PR #${{ github.event.pull_request.number }} was closed without merging"
+          fi
+
+  # Trigger deployment workflow
+  trigger-deployment:
+    needs: check-merge
+    runs-on: ubuntu-latest
+    if: needs.check-merge.outputs.is-merged == 'true'
+    steps:
+      - name: Trigger deployment
+        run: |
+          echo "🚀 PR merged to main - triggering deployment workflow"
+          echo "📝 PR #${{ github.event.pull_request.number }} merged by ${{ github.event.pull_request.merged_by.login }}"
+          echo "🔗 PR URL: ${{ github.event.pull_request.html_url }}"
+          echo "📋 Commit: ${{ github.event.pull_request.merge_commit_sha }}"

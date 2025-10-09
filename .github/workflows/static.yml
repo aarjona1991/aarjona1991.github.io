@@ -2,13 +2,17 @@
 name: Deploy Portfolio to GitHub Pages
 
 on:
-  # Runs on pushes targeting the development branch
+  # Runs on pushes targeting the development branch (build only)
   push:
     branches: ["development"]
   
-  # Runs on pull requests to development
+  # Runs on pull requests to development (build only)
   pull_request:
     branches: ["development"]
+  
+  # Runs when PR is merged to main (deploy to production)
+  push:
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,9 +29,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build and test job
+  # Build job (runs on development pushes and PRs)
   build:
     runs-on: ubuntu-latest
+    # Only run on development branch events, not on main
+    if: github.ref == 'refs/heads/development' || github.event_name == 'pull_request'
+    outputs:
+      build-success: ${{ steps.build-status.outputs.success }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -70,26 +78,88 @@ jobs:
           ls -la build/
           echo "Build completed successfully"
 
-      - name: Upload build artifacts
+      - name: Set build status
+        id: build-status
+        run: |
+          echo "success=true" >> $GITHUB_OUTPUT
+
+      - name: Upload build artifacts (Development)
+        if: github.ref == 'refs/heads/development'
         uses: actions/upload-artifact@v4
         with:
-          name: build-files
+          name: build-files-dev
           path: build/
-          retention-days: 1
+          retention-days: 7
 
-  # Deploy job
-  deploy:
-    needs: build
+      - name: Upload build artifacts (PR)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files-pr-${{ github.event.number }}
+          path: build/
+          retention-days: 3
+
+      - name: Build status (Development)
+        if: github.ref == 'refs/heads/development'
+        run: |
+          echo "✅ Development build completed successfully!"
+          echo "📦 Artifacts uploaded for future deployment"
+
+      - name: Build status (PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "✅ PR build completed successfully!"
+          echo "📦 Artifacts uploaded for PR review"
+
+  # Production build and deploy job (runs only on main branch)
+  build-and-deploy:
     runs-on: ubuntu-latest
+    # Only run on main branch pushes
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          name: build-files
-          path: build/
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'yarn'
+
+      - name: Clean install dependencies
+        run: |
+          yarn install --frozen-lockfile --prefer-offline
+
+      - name: Clean previous builds
+        run: |
+          rm -rf build/
+          rm -rf public/styles/output.css
+          rm -rf node_modules/.cache
+
+      - name: Pre-deployment verification
+        run: |
+          node scripts/pre-deploy.js
+
+      - name: Generate Tailwind CSS
+        run: |
+          yarn tailwindcss -i ./src/index.css -o ./public/styles/output.css --minify
+
+      - name: Build React app
+        run: |
+          yarn build
+        env:
+          CI: false
+          GENERATE_SOURCEMAP: false
+
+      - name: Verify build output
+        run: |
+          ls -la build/
+          echo "Production build completed successfully"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -103,7 +173,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Deployment status
+      - name: Production deployment status
         run: |
-          echo "Deployment completed successfully!"
-          echo "URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "🚀 Production deployment completed successfully!"
+          echo "🌐 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📅 Deployed at: $(date)"

@@ -4,10 +4,12 @@ Este documento explica cómo funciona el sistema de deployment optimizado para G
 
 ## 📋 Configuración Actual
 
-### Branch de Deployment
-- **Branch principal**: `development`
-- **Trigger**: Push a `development` o Pull Request
-- **Deployment automático**: ✅ Habilitado
+### Flujo de Deployment
+- **Branch de desarrollo**: `development` (solo build, sin deploy)
+- **Branch de producción**: `main` (build + deploy)
+- **Trigger de build**: Push a `development` o Pull Request
+- **Trigger de deploy**: Push a `main` (después de merge de PR)
+- **Deployment automático**: ✅ Solo en `main`
 
 ### Workflow Optimizado
 
@@ -59,7 +61,7 @@ yarn build:production
 
 ## 🔧 Proceso de Deployment
 
-### 1. Desarrollo
+### 1. Desarrollo (Branch `development`)
 ```bash
 # Hacer cambios en el código
 git add .
@@ -67,19 +69,39 @@ git commit -m "feat: nueva funcionalidad"
 git push origin development
 ```
 
-### 2. Verificación Automática
-El workflow automáticamente:
-- ✅ Limpia artifacts anteriores
-- ✅ Instala dependencias con cache
-- ✅ Verifica archivos requeridos
-- ✅ Genera CSS optimizado
-- ✅ Construye la aplicación
-- ✅ Sube artifacts a GitHub Pages
+**Resultado**: ✅ Build automático (sin deploy)
+- Limpia artifacts anteriores
+- Instala dependencias con cache
+- Verifica archivos requeridos
+- Genera CSS optimizado
+- Construye la aplicación
+- Sube artifacts para revisión
 
-### 3. Deployment
-- ✅ Se ejecuta solo si el build es exitoso
-- ✅ Usa artifacts frescos del build actual
-- ✅ No mezcla con builds anteriores
+### 2. Crear Pull Request
+```bash
+# Crear PR de development a main
+# En GitHub: New Pull Request
+# Base: main ← Compare: development
+```
+
+**Resultado**: ✅ Build de PR (sin deploy)
+- Verifica que el PR compile correctamente
+- Sube artifacts para revisión
+- Permite revisar cambios antes del merge
+
+### 3. Merge a Main (Deployment)
+```bash
+# Merge PR en GitHub
+# O merge local:
+git checkout main
+git merge development
+git push origin main
+```
+
+**Resultado**: 🚀 Deploy automático a GitHub Pages
+- Build de producción limpio
+- Deploy inmediato a GitHub Pages
+- URL pública actualizada
 
 ## 🚨 Solución de Problemas
 
