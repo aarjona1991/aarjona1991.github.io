@@ -1,0 +1,47 @@
+{
+  "name": "aarjona1991-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Frontend Developer Portfolio",
+  "keywords": [
+    "frontend",
+    "developer",
+    "react",
+    "typescript",
+    "portfolio",
+    "web development"
+  ],
+  "author": "aarjona1991",
+  "license": "MIT",
+  "homepage": "https://aarjona1991.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarjona1991/aarjona1991.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aarjona1991/aarjona1991.github.io/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/index.css -o ./public/styles/output.css --minify",
+    "build:js": "react-scripts build",
+    "deploy": "npm run build && gh-pages -d build",
+    "preview": "serve -s build -l 3000"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "gh-pages": "^4.0.0",
+    "serve": "^14.0.0"
+  }
+}

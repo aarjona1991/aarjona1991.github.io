@@ -1,0 +1,11 @@
+# Netlify redirects
+/*    /index.html   200
+
+# Language redirects
+/?lang=es    /index.html?lang=es    200
+/?lang=en    /index.html?lang=en    200
+
+# Privacy policy redirects
+/privacy-policy    /privacy-policy.html    200
+/privacy-policy-es    /privacy-policy-es.html    200
+/privacy-policy-en    /privacy-policy-en.html    200

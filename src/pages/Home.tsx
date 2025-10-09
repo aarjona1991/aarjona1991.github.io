@@ -1,9 +1,23 @@
-import React from 'react';
+import { 
+    Navigation, 
+    Hero, 
+    About, 
+    Skills, 
+    Projects, 
+    Contact, 
+    Footer 
+} from "./components/molecules";
 
 const Home = () => {
-    return(
+    return (
         <>
-            Hello World!
+            <Navigation />
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
         </>
     );
 };

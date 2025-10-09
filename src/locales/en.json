@@ -1,0 +1,223 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "professions": [
+      "Frontend Developer",
+      "React Specialist",
+      "UI/UX Designer",
+      "Digital Experience Creator"
+    ],
+    "description": "Specialized in creating exceptional web experiences with React, TypeScript and the latest frontend technologies. Passionate about UI/UX design and performance optimization.",
+    "contactButton": "Contact Me",
+    "projectsButton": "View Projects"
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "subtitle": "Passionate about creating exceptional digital experiences that combine elegant design with robust functionality.",
+    "storyTitle": "My Story",
+    "storyText1": "I'm a passionate frontend developer with over 3 years of experience creating modern and responsive web applications. My focus is on writing clean, scalable and maintainable code.",
+    "storyText2": "I specialize in React, TypeScript and the latest frontend technologies, always looking for new ways to improve user experience and optimize application performance.",
+    "mainTechnologies": "Main Technologies",
+    "experienceTitle": "My",
+    "experienceTitleHighlight": "Experience",
+    "stats": {
+      "projects": "Completed Projects",
+      "experience": "Years of Experience",
+      "satisfaction": "Client Satisfaction",
+      "availability": "Availability"
+    },
+    "experiences": [
+      {
+        "year": "2024",
+        "title": "Senior Frontend Developer",
+        "company": "Tech Solutions",
+        "description": "Leading the development of modern React applications and optimizing user experience."
+      },
+      {
+        "year": "2022",
+        "title": "Frontend Developer",
+        "company": "Digital Agency",
+        "description": "Developing responsive user interfaces and reusable components."
+      },
+      {
+        "year": "2020",
+        "title": "Junior Developer",
+        "company": "Startup Inc",
+        "description": "Starting my career in frontend development with HTML, CSS and vanilla JavaScript."
+      }
+    ]
+  },
+  "skills": {
+    "title": "My",
+    "titleHighlight": "Skills",
+    "subtitle": "A diverse set of technologies and tools that allow me to create complete and efficient solutions.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "icon": "💻"
+      },
+      "styling": {
+        "title": "Styling & Design",
+        "icon": "🎨"
+      },
+      "tools": {
+        "title": "Tools & Libraries",
+        "icon": "🛠️"
+      },
+      "backend": {
+        "title": "Backend & Database",
+        "icon": "⚙️"
+      }
+    },
+    "softSkills": {
+      "title": "Soft",
+      "titleHighlight": "Skills",
+      "subtitle": "The interpersonal skills that help me work effectively in a team",
+      "skills": [
+        "Communication",
+        "Teamwork",
+        "Problem Solving",
+        "Adaptability",
+        "Creativity",
+        "Leadership"
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "list": [
+        "React Developer Certification",
+        "TypeScript Fundamentals",
+        "AWS Cloud Practitioner",
+        "Google UX Design Certificate"
+      ]
+    }
+  },
+  "projects": {
+    "title": "My",
+    "titleHighlight": "Projects",
+    "subtitle": "A collection of projects that demonstrate my experience and passion for frontend development.",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "AI/ML"
+    },
+    "cta": {
+      "text": "Interested in working together?",
+      "button": "Let's talk about your project"
+    },
+    "items": [
+      {
+        "title": "E-Commerce Platform",
+        "description": "Complete e-commerce platform built with React, TypeScript and Node.js. Includes shopping cart, payments, user management and admin panel.",
+        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+        "category": "web",
+        "featured": true
+      },
+      {
+        "title": "Task Management App",
+        "description": "Task management application with drag & drop, real-time collaboration and push notifications. Built with Next.js and Socket.io.",
+        "technologies": ["Next.js", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS"],
+        "category": "web",
+        "featured": true
+      },
+      {
+        "title": "Weather Dashboard",
+        "description": "Interactive weather dashboard with maps, charts and forecasts. Integrates multiple weather APIs and displays real-time data.",
+        "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "Leaflet", "SCSS"],
+        "category": "web",
+        "featured": false
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Personal portfolio website with modern design, smooth animations and SEO optimization. Built with React and deployed on Vercel.",
+        "technologies": ["React", "Framer Motion", "Tailwind CSS", "Vercel", "SEO"],
+        "category": "web",
+        "featured": false
+      },
+      {
+        "title": "Mobile Banking App",
+        "description": "Mobile banking application with biometric authentication, secure transfers and account management. Developed with React Native.",
+        "technologies": ["React Native", "Redux", "Firebase", "Biometric Auth", "JWT"],
+        "category": "mobile",
+        "featured": true
+      },
+      {
+        "title": "AI Chat Assistant",
+        "description": "AI-powered chat assistant that answers questions and helps with tasks. Integrates OpenAI API and natural language processing.",
+        "technologies": ["React", "OpenAI API", "Node.js", "WebSocket", "NLP"],
+        "category": "ai",
+        "featured": false
+      }
+    ],
+    "actions": {
+      "demo": "View Demo",
+      "code": "Code"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? I'd love to hear about it. Let's work together to create something amazing.",
+    "info": {
+      "title": "Let's talk about your project",
+      "description": "I'm always interested in new challenges and opportunities. If you have an idea or project in mind, don't hesitate to contact me. I'll respond as soon as possible.",
+      "socialTitle": "Follow me on social media"
+    },
+    "form": {
+      "title": "Send me a message",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "your@email.com",
+        "subject": "How can I help you?",
+        "message": "Tell me about your project..."
+      },
+      "button": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon."
+    },
+    "contactInfo": [
+      {
+        "title": "Email",
+        "value": "aarjona1991@gmail.com"
+      },
+      {
+        "title": "Phone",
+        "value": "+1 (555) 123-4567"
+      },
+      {
+        "title": "Location",
+        "value": "Madrid, Spain"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Frontend Developer passionate about creating exceptional digital experiences. Specialized in React, TypeScript and the latest web technologies.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "common": {
+    "backToTop": "Back to top",
+    "backToPortfolio": "Back to Portfolio",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "featured": "Featured"
+  }
+}
