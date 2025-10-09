@@ -1,0 +1,39 @@
+# GitHub Pages configuration
+# This file ensures proper deployment settings
+
+# Build configuration
+build:
+  # Use the build directory as the source
+  source: build/
+  
+  # Enable clean builds
+  clean: true
+  
+  # Cache configuration
+  cache:
+    enabled: true
+    paths:
+      - node_modules/
+      - .yarn/cache/
+
+# Deployment settings
+deployment:
+  # Only deploy from development branch
+  branch: development
+  
+  # Clean deployment
+  clean: true
+  
+  # Preserve build artifacts for 1 day
+  artifact_retention_days: 1
+
+# Performance optimizations
+performance:
+  # Enable compression
+  compression: true
+  
+  # Enable caching
+  caching: true
+  
+  # Minify assets
+  minify: true

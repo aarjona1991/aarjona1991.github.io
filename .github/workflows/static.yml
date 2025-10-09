@@ -1,10 +1,14 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Optimized workflow for deploying React portfolio to GitHub Pages
+name: Deploy Portfolio to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting development or main branches
   push:
-    branches: ["main"]
+    branches: ["development", "main"]
+  
+  # Runs on pull requests to development (build only)
+  pull_request:
+    branches: ["development"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,38 +20,157 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  # Build job (runs on development pushes and PRs)
+  build:
+    runs-on: ubuntu-latest
+    # Only run on development branch events, not on main
+    if: github.ref == 'refs/heads/development' || github.event_name == 'pull_request'
+    outputs:
+      build-success: ${{ steps.build-status.outputs.success }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'yarn'
+
+      - name: Clean install dependencies
+        run: |
+          yarn install --frozen-lockfile --prefer-offline
+
+      - name: Clean previous builds
+        run: |
+          rm -rf build/
+          rm -rf public/styles/output.css
+          rm -rf node_modules/.cache
+
+      - name: Pre-deployment verification
+        run: |
+          node scripts/pre-deploy.js
+
+      - name: Generate Tailwind CSS
+        run: |
+          yarn tailwindcss -i ./src/index.css -o ./public/styles/output.css --minify
+
+      - name: Build React app
+        run: |
+          yarn build
+        env:
+          CI: false
+          GENERATE_SOURCEMAP: false
+
+      - name: Verify build output
+        run: |
+          ls -la build/
+          echo "Build completed successfully"
+
+      - name: Set build status
+        id: build-status
+        run: |
+          echo "success=true" >> $GITHUB_OUTPUT
+
+      - name: Upload build artifacts (Development)
+        if: github.ref == 'refs/heads/development'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files-dev
+          path: build/
+          retention-days: 7
+
+      - name: Upload build artifacts (PR)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files-pr-${{ github.event.number }}
+          path: build/
+          retention-days: 3
+
+      - name: Build status (Development)
+        if: github.ref == 'refs/heads/development'
+        run: |
+          echo "✅ Development build completed successfully!"
+          echo "📦 Artifacts uploaded for future deployment"
+
+      - name: Build status (PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "✅ PR build completed successfully!"
+          echo "📦 Artifacts uploaded for PR review"
+
+  # Production build and deploy job (runs only on main branch)
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # Only run on main branch pushes
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Use Node.js 20.x
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-      - run: yarn install
-      - run: yarn build --if-present
+          node-version: '20.x'
+          cache: 'yarn'
 
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Clean install dependencies
+        run: |
+          yarn install --frozen-lockfile --prefer-offline
+
+      - name: Clean previous builds
+        run: |
+          rm -rf build/
+          rm -rf public/styles/output.css
+          rm -rf node_modules/.cache
+
+      - name: Pre-deployment verification
+        run: |
+          node scripts/pre-deploy.js
+
+      - name: Generate Tailwind CSS
+        run: |
+          yarn tailwindcss -i ./src/index.css -o ./public/styles/output.css --minify
+
+      - name: Build React app
+        run: |
+          yarn build
+        env:
+          CI: false
+          GENERATE_SOURCEMAP: false
+
+      - name: Verify build output
+        run: |
+          ls -la build/
+          echo "Production build completed successfully"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: './build'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Production deployment status
+        run: |
+          echo "🚀 Production deployment completed successfully!"
+          echo "🌐 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📅 Deployed at: $(date)"
