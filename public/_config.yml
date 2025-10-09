@@ -1,0 +1,47 @@
+# GitHub Pages Configuration
+title: aarjona1991 - Frontend Developer Portfolio
+description: Professional Frontend Developer specialized in React, TypeScript, and modern web technologies
+author: aarjona1991
+email: aarjona1991@gmail.com
+url: https://aarjona1991.github.io
+baseurl: ""
+
+# SEO Configuration
+lang: en
+timezone: Europe/Madrid
+permalink: /:title/
+
+# Social Media
+github_username: aarjona1991
+twitter_username: aarjona1991
+linkedin_username: aarjona1991
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

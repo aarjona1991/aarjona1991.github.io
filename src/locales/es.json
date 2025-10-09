@@ -1,0 +1,223 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "professions": [
+      "Desarrollador Frontend",
+      "Especialista en React",
+      "Diseñador UI/UX",
+      "Creador de Experiencias Digitales"
+    ],
+    "description": "Especializado en crear experiencias web excepcionales con React, TypeScript y las últimas tecnologías frontend. Apasionado por el diseño UI/UX y la optimización de rendimiento.",
+    "contactButton": "Contáctame",
+    "projectsButton": "Ver Proyectos"
+  },
+  "about": {
+    "title": "Sobre",
+    "titleHighlight": "Mí",
+    "subtitle": "Apasionado por crear experiencias digitales excepcionales que combinan diseño elegante con funcionalidad robusta.",
+    "storyTitle": "Mi Historia",
+    "storyText1": "Soy un desarrollador frontend apasionado con más de 3 años de experiencia creando aplicaciones web modernas y responsivas. Mi enfoque se centra en escribir código limpio, escalable y mantenible.",
+    "storyText2": "Me especializo en React, TypeScript y las últimas tecnologías frontend, siempre buscando nuevas formas de mejorar la experiencia del usuario y optimizar el rendimiento de las aplicaciones.",
+    "mainTechnologies": "Tecnologías Principales",
+    "experienceTitle": "Mi",
+    "experienceTitleHighlight": "Experiencia",
+    "stats": {
+      "projects": "Proyectos Completados",
+      "experience": "Años de Experiencia",
+      "satisfaction": "Satisfacción del Cliente",
+      "availability": "Disponibilidad"
+    },
+    "experiences": [
+      {
+        "year": "2024",
+        "title": "Desarrollador Frontend Senior",
+        "company": "Tech Solutions",
+        "description": "Liderando el desarrollo de aplicaciones React modernas y optimizando la experiencia de usuario."
+      },
+      {
+        "year": "2022",
+        "title": "Desarrollador Frontend",
+        "company": "Digital Agency",
+        "description": "Desarrollando interfaces de usuario responsivas y componentes reutilizables."
+      },
+      {
+        "year": "2020",
+        "title": "Desarrollador Junior",
+        "company": "Startup Inc",
+        "description": "Iniciando mi carrera en desarrollo frontend con HTML, CSS y JavaScript vanilla."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Mis",
+    "titleHighlight": "Habilidades",
+    "subtitle": "Un conjunto diverso de tecnologías y herramientas que me permiten crear soluciones completas y eficientes.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "icon": "💻"
+      },
+      "styling": {
+        "title": "Styling & Design",
+        "icon": "🎨"
+      },
+      "tools": {
+        "title": "Tools & Libraries",
+        "icon": "🛠️"
+      },
+      "backend": {
+        "title": "Backend & Database",
+        "icon": "⚙️"
+      }
+    },
+    "softSkills": {
+      "title": "Habilidades",
+      "titleHighlight": "Blandas",
+      "subtitle": "Las habilidades interpersonales que me ayudan a trabajar efectivamente en equipo",
+      "skills": [
+        "Comunicación",
+        "Trabajo en Equipo",
+        "Resolución de Problemas",
+        "Adaptabilidad",
+        "Creatividad",
+        "Liderazgo"
+      ]
+    },
+    "certifications": {
+      "title": "Certificaciones",
+      "list": [
+        "React Developer Certification",
+        "TypeScript Fundamentals",
+        "AWS Cloud Practitioner",
+        "Google UX Design Certificate"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Mis",
+    "titleHighlight": "Proyectos",
+    "subtitle": "Una colección de proyectos que demuestran mi experiencia y pasión por el desarrollo frontend.",
+    "filters": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "AI/ML"
+    },
+    "cta": {
+      "text": "¿Interesado en trabajar juntos?",
+      "button": "Hablemos de tu proyecto"
+    },
+    "items": [
+      {
+        "title": "E-Commerce Platform",
+        "description": "Plataforma de comercio electrónico completa construida con React, TypeScript y Node.js. Incluye carrito de compras, pagos, gestión de usuarios y panel de administración.",
+        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+        "category": "web",
+        "featured": true
+      },
+      {
+        "title": "Task Management App",
+        "description": "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones push. Construida con Next.js y Socket.io.",
+        "technologies": ["Next.js", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS"],
+        "category": "web",
+        "featured": true
+      },
+      {
+        "title": "Weather Dashboard",
+        "description": "Dashboard meteorológico interactivo con mapas, gráficos y predicciones. Integra múltiples APIs meteorológicas y muestra datos en tiempo real.",
+        "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "Leaflet", "SCSS"],
+        "category": "web",
+        "featured": false
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Sitio web portfolio personal con diseño moderno, animaciones suaves y optimización SEO. Construido con React y desplegado en Vercel.",
+        "technologies": ["React", "Framer Motion", "Tailwind CSS", "Vercel", "SEO"],
+        "category": "web",
+        "featured": false
+      },
+      {
+        "title": "Mobile Banking App",
+        "description": "Aplicación móvil de banca con autenticación biométrica, transferencias seguras y gestión de cuentas. Desarrollada con React Native.",
+        "technologies": ["React Native", "Redux", "Firebase", "Biometric Auth", "JWT"],
+        "category": "mobile",
+        "featured": true
+      },
+      {
+        "title": "AI Chat Assistant",
+        "description": "Asistente de chat con inteligencia artificial que responde preguntas y ayuda con tareas. Integra OpenAI API y procesamiento de lenguaje natural.",
+        "technologies": ["React", "OpenAI API", "Node.js", "WebSocket", "NLP"],
+        "category": "ai",
+        "featured": false
+      }
+    ],
+    "actions": {
+      "demo": "Ver Demo",
+      "code": "Código"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Trabajemos juntos para crear algo increíble.",
+    "info": {
+      "title": "Hablemos de tu proyecto",
+      "description": "Estoy siempre interesado en nuevos desafíos y oportunidades. Si tienes una idea o proyecto en mente, no dudes en contactarme. Responderé lo antes posible.",
+      "socialTitle": "Sígueme en redes sociales"
+    },
+    "form": {
+      "title": "Envíame un mensaje",
+      "fields": {
+        "name": "Nombre",
+        "email": "Email",
+        "subject": "Asunto",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Tu nombre",
+        "email": "tu@email.com",
+        "subject": "¿En qué puedo ayudarte?",
+        "message": "Cuéntame sobre tu proyecto..."
+      },
+      "button": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado correctamente! Te responderé pronto."
+    },
+    "contactInfo": [
+      {
+        "title": "Email",
+        "value": "aarjona1991@gmail.com"
+      },
+      {
+        "title": "Teléfono",
+        "value": "+1 (555) 123-4567"
+      },
+      {
+        "title": "Ubicación",
+        "value": "Madrid, España"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Desarrollador Frontend apasionado por crear experiencias digitales excepcionales. Especializado en React, TypeScript y las últimas tecnologías web.",
+    "quickLinks": "Enlaces Rápidos",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso"
+  },
+  "common": {
+    "backToTop": "Volver arriba",
+    "backToPortfolio": "Volver al Portfolio",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "featured": "Destacado"
+  }
+}
