@@ -84,13 +84,11 @@ const Projects = () => {
                     </div>
 
                     {/* Projects Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {filteredProjects.map((project: any, index: number) => (
                             <div 
                                 key={project.id}
-                                className={`group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 ${
-                                    project.featured ? 'lg:col-span-2' : ''
-                                }`}
+                                className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105"
                                 style={{
                                     animationDelay: `${index * 100}ms`
                                 }}
