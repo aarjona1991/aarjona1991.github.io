@@ -23,7 +23,7 @@
     "titleHighlight": "Me",
     "subtitle": "Passionate about creating exceptional digital experiences that combine elegant design with robust functionality.",
     "storyTitle": "My Story",
-    "storyText1": "I'm a passionate frontend developer with over 3 years of experience creating modern and responsive web applications. My focus is on writing clean, scalable and maintainable code.",
+    "storyText1": "I'm a passionate frontend developer with over 4 years of experience creating modern and responsive web applications. My focus is on writing clean, scalable and maintainable code.",
     "storyText2": "I specialize in React, TypeScript and the latest frontend technologies, always looking for new ways to improve user experience and optimize application performance.",
     "mainTechnologies": "Main Technologies",
     "experienceTitle": "My",
@@ -37,21 +37,21 @@
     "experiences": [
       {
         "year": "2024",
-        "title": "Senior Frontend Developer",
-        "company": "Tech Solutions",
-        "description": "Leading the development of modern React applications and optimizing user experience."
+        "title": "Frontend Web Developer",
+        "company": "Tata Consultancy Services",
+        "description": "Building and maintaining modern, responsive web interfaces for enterprise clients as part of global engineering teams."
       },
       {
         "year": "2022",
         "title": "Frontend Developer",
-        "company": "Digital Agency",
-        "description": "Developing responsive user interfaces and reusable components."
+        "company": "Apuestes.com",
+        "description": "Developed responsive frontends for a sports betting and tipster platform with real-time predictions and data."
       },
       {
-        "year": "2020",
-        "title": "Junior Developer",
-        "company": "Startup Inc",
-        "description": "Starting my career in frontend development with HTML, CSS and vanilla JavaScript."
+        "year": "2018",
+        "title": "Frontend Developer",
+        "company": "Sitios Agencia Digital",
+        "description": "Built custom, responsive websites for clients at a Montevideo-based web design agency."
       }
     ]
   },
@@ -93,10 +93,12 @@
     "certifications": {
       "title": "Certifications",
       "list": [
-        "React Developer Certification",
-        "TypeScript Fundamentals",
-        "AWS Cloud Practitioner",
-        "Google UX Design Certificate"
+        "JavaScript Front-End (Talently)",
+        "JavaScript Back-End (Talently)",
+        "React JS (Talently)",
+        "Vue JS (Talently)",
+        "PHP (Talently)",
+        "Braze Certified Practitioner"
       ]
     }
   },
@@ -116,46 +118,11 @@
     },
     "items": [
       {
-        "title": "E-Commerce Platform",
-        "description": "Complete e-commerce platform built with React, TypeScript and Node.js. Includes shopping cart, payments, user management and admin panel.",
-        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+        "title": "Casa Trinidad Viva",
+        "description": "Live, finished booking website for a guesthouse in the colonial center of Trinidad, Cuba. Single-page experience with room showcase, local experiences, online reservation flow and strong SEO (structured data, Open Graph and multilingual metadata).",
+        "technologies": ["React", "Vite", "Tailwind CSS", "SEO"],
         "category": "web",
         "featured": true
-      },
-      {
-        "title": "Task Management App",
-        "description": "Task management application with drag & drop, real-time collaboration and push notifications. Built with Next.js and Socket.io.",
-        "technologies": ["Next.js", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS"],
-        "category": "web",
-        "featured": true
-      },
-      {
-        "title": "Weather Dashboard",
-        "description": "Interactive weather dashboard with maps, charts and forecasts. Integrates multiple weather APIs and displays real-time data.",
-        "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "Leaflet", "SCSS"],
-        "category": "web",
-        "featured": false
-      },
-      {
-        "title": "Portfolio Website",
-        "description": "Personal portfolio website with modern design, smooth animations and SEO optimization. Built with React and deployed on Vercel.",
-        "technologies": ["React", "Framer Motion", "Tailwind CSS", "Vercel", "SEO"],
-        "category": "web",
-        "featured": false
-      },
-      {
-        "title": "Mobile Banking App",
-        "description": "Mobile banking application with biometric authentication, secure transfers and account management. Developed with React Native.",
-        "technologies": ["React Native", "Redux", "Firebase", "Biometric Auth", "JWT"],
-        "category": "mobile",
-        "featured": true
-      },
-      {
-        "title": "AI Chat Assistant",
-        "description": "AI-powered chat assistant that answers questions and helps with tasks. Integrates OpenAI API and natural language processing.",
-        "technologies": ["React", "OpenAI API", "Node.js", "WebSocket", "NLP"],
-        "category": "ai",
-        "featured": false
       }
     ],
     "actions": {
