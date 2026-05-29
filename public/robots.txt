@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aarjona1991.github.io/sitemap.xml
+Sitemap: https://n33no.online/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

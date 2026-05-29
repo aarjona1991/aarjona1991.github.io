@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Política de Privacidad — Aethera</title>
+    <meta name="description" content="Política de privacidad de la aplicación Aethera: qué datos de salud, ubicación y cuenta se recopilan, cómo se usan, con quién se comparten y cómo eliminarlos.">
+    <link rel="canonical" href="https://n33no.online/devguy/aethera/privacy-policy.html">
+    <link rel="alternate" hreflang="es" href="https://n33no.online/devguy/aethera/privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="https://n33no.online/devguy/aethera/privacy-policy-en.html">
+    <link rel="stylesheet" href="/styles/output.css">
+    <script>
+        // Evitar parpadeo de tema (FOUC) antes de cargar estilos
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="dark:bg-gray-900 antialiased">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">Aethera</span>
+                    <a href="/devguy/aethera/privacy-policy-en.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">English version</a>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                    Política de Privacidad
+                </h1>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    Aplicación móvil <strong>Aethera</strong> (Android) · Identificador del paquete: <code>com.devguy.aethera</code>
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
+                    Última actualización: 28 de mayo de 2026 · Vigente desde: 28 de mayo de 2026
+                </p>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="text-blue-800 dark:text-blue-200">
+                        <strong>Resumen:</strong> Aethera es una app de <strong>bienestar personal</strong> (biorritmo, numerología, clima, estado de ánimo, sueño y, opcionalmente, datos de wearables). Tus datos se procesan principalmente <strong>en tu dispositivo</strong>. Solo accedemos a datos de salud que tú autorizas expresamente, no los vendemos ni los usamos para publicidad, y puedes revocar el acceso o eliminarlos en cualquier momento.
+                    </p>
+                </div>
+
+                <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 mb-8">
+                    <p class="text-amber-800 dark:text-amber-200">
+                        <strong>Aviso importante:</strong> Aethera <strong>no es una aplicación médica</strong> y no diagnostica, trata ni previene enfermedades. La información que ofrece es de carácter informativo y de bienestar, y no sustituye el consejo de un profesional de la salud.
+                    </p>
+                </div>
+
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">1. Responsable del tratamiento</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        El responsable del tratamiento de los datos es <strong>Adrian Arjona Clavelo</strong> (desarrollador independiente de Aethera), con domicilio en Montevideo, Uruguay. Puedes contactarnos en cualquier momento en <a href="mailto:aarjona1991@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">aarjona1991@gmail.com</a>.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Datos que recopilamos</h2>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.1 Datos de cuenta y perfil</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>Inicio de sesión con Google (opcional):</strong> nombre, dirección de correo electrónico, foto de perfil e identificador de usuario, a través de Firebase Authentication.</li>
+                        <li><strong>Perfil de bienestar:</strong> nombre, <strong>fecha de nacimiento</strong> (para calcular biorritmo, numerología y signo astrológico) y preferencias de la app.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.2 Datos de salud y actividad física</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        Solo si lo autorizas expresamente, Aethera lee los siguientes datos a través de <strong>Health Connect</strong> y/o de tu pulsera/reloj por <strong>Bluetooth (BLE)</strong>:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Pasos y distancia recorrida</li>
+                        <li>Sueño (duración y fases, según el dispositivo)</li>
+                        <li>Frecuencia cardiaca y frecuencia cardiaca en reposo</li>
+                        <li>Ejercicio y calorías activas</li>
+                        <li>Saturación de oxígeno (SpO₂), nivel de estrés y batería del wearable (cuando el dispositivo lo proporciona)</li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        Estos datos provienen de Health Connect o de apps de tu wearable (por ejemplo, Mi Fitness, Google Fit u otras que tú autorices). Aethera <strong>solo lee</strong> estos datos; <strong>nunca escribe</strong> en Health Connect.
+                    </p>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.3 Micrófono (medición de ruido del entorno)</h3>
+                    <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 mb-4">
+                        <p class="text-green-800 dark:text-green-200">
+                            En el Asistente de Sueño, y solo con tu permiso, el micrófono se usa exclusivamente para <strong>medir el nivel de ruido ambiental (decibelios)</strong> y evaluar tu entorno de descanso. El audio se procesa en tiempo real en el dispositivo y <strong>no se graba, no se almacena y no se transmite</strong> a ningún servidor.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.4 Ubicación</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>Ubicación aproximada o precisa:</strong> se usa únicamente para obtener el pronóstico del clima de tu zona. Puedes denegar este permiso y la app seguirá funcionando.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.5 Datos generados en la app</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Registros de estado de ánimo y de sueño (check-ins) y notas que escribas.</li>
+                        <li>Ajustes, recordatorios, notificaciones y preferencias de tema/idioma.</li>
+                        <li>Estado de la suscripción (Aethera Plus) según Google Play.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-medium text-gray-800 dark:text-gray-200 mt-6 mb-3">2.6 Datos técnicos y de uso</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Eventos de uso e información básica del dispositivo a través de <strong>Firebase Analytics</strong>, para entender el uso de las funciones y mejorar la app.</li>
+                        <li>Registros técnicos de errores para diagnosticar fallos.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">3. Para qué usamos tus datos</h2>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Personalizar tu guía diaria de bienestar (biorritmo, numerología, clima y, si están disponibles, señales de tu wearable).</li>
+                        <li>Generar recomendaciones de sueño y evaluar el entorno de descanso.</li>
+                        <li>Mostrar el clima de tu ubicación.</li>
+                        <li>Enviar notificaciones y recordatorios que actives.</li>
+                        <li>Gestionar la suscripción Aethera Plus y sus funciones.</li>
+                        <li>Mejorar el rendimiento, la estabilidad y la experiencia de la app.</li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        <strong>No</strong> usamos tus datos de salud ni de actividad física con fines publicitarios, ni los vendemos, ni los empleamos para crear perfiles con fines de marketing.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">4. Procesamiento por inteligencia artificial</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        Para generar la guía diaria, Aethera envía un <strong>conjunto reducido de señales agregadas</strong> (porcentajes de biorritmo, número de numerología del día, datos del clima y un resumen no identificable de métricas del wearable, como minutos de sueño o pulso reciente) a un proveedor de IA (Google Gemini u Ollama) a través de un <strong>backend seguro</strong> gestionado por el desarrollador.
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>No se envía tu identidad, tu correo, ni registros de salud sin procesar.</li>
+                        <li>Las comunicaciones viajan cifradas (HTTPS/TLS) y las claves no se incluyen en la app.</li>
+                        <li>Si no usas la función de guía por IA, no se envía ninguna de estas señales.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">5. Health Connect</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        El uso que Aethera hace de los datos obtenidos a través de Health Connect cumple la <a href="https://developer.android.com/health-and-fitness/health-connect/data-and-data-types/data-management" class="text-blue-600 dark:text-blue-400 hover:underline">Política de permisos de Health Connect</a> y la Política de Datos de Usuario de Google Play, incluyendo el requisito de uso limitado:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Solo solicitamos los tipos de datos necesarios para las funciones de bienestar y sueño que usas.</li>
+                        <li>Aethera <strong>solo lee</strong> datos de Health Connect; no escribe ni modifica datos.</li>
+                        <li>Los datos de salud <strong>no se transfieren a terceros</strong> salvo para prestar la función solicitada, ni se usan para publicidad o para vender.</li>
+                        <li>Puedes revocar el acceso en cualquier momento desde Health Connect o desde los ajustes del sistema.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">6. Dónde se almacenan tus datos</h2>
+                    <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 mb-4">
+                        <p class="text-green-800 dark:text-green-200">
+                            <strong>En tu dispositivo:</strong> la mayoría de los datos (historial de ánimo y sueño, último resumen del wearable, caché de la guía del día, preferencias) se guardan localmente mediante la base de datos local de la app y el almacenamiento de preferencias.
+                        </p>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>Firebase (Authentication y Firestore):</strong> si inicias sesión con tu cuenta, se almacenan tu identificador y datos básicos de perfil para sincronizarlos.</li>
+                        <li><strong>Backend del desarrollador y proveedores de IA/clima:</strong> procesan temporalmente las señales agregadas para devolver la guía o el pronóstico; no se usan para identificarte.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">7. Con quién compartimos datos</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        No vendemos ni alquilamos tus datos personales. Compartimos el mínimo imprescindible con los siguientes <strong>encargados de tratamiento</strong>, únicamente para que la app funcione:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>Google Firebase</strong> (Authentication, Firestore, Analytics): cuenta, perfil y métricas de uso.</li>
+                        <li><strong>Google Play Billing</strong>: gestión de la suscripción. Google procesa el pago; <strong>no almacenamos datos de tarjetas</strong>.</li>
+                        <li><strong>Proveedor de clima</strong> (a través de nuestro backend): coordenadas aproximadas para el pronóstico.</li>
+                        <li><strong>Proveedor de IA</strong> (Google Gemini u Ollama, a través de nuestro backend): señales agregadas para la guía diaria.</li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        También podríamos divulgar datos si la ley lo exige. Los datos de salud nunca se comparten con fines publicitarios.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">8. Conservación y eliminación</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        Conservamos los datos mientras uses la app o mantengas tu cuenta. Puedes eliminar tus datos así:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>Datos en el dispositivo:</strong> bórralos desde los Ajustes de la app o desinstalando Aethera.</li>
+                        <li><strong>Acceso a salud:</strong> revoca los permisos en Health Connect o desconecta el wearable desde la app.</li>
+                        <li><strong>Cuenta y datos en Firebase:</strong> escribe a <a href="mailto:aarjona1991@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">aarjona1991@gmail.com</a> solicitando la eliminación de tu cuenta y atenderemos la solicitud en un plazo razonable.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">9. Seguridad</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Aplicamos medidas razonables de seguridad: conexiones cifradas (HTTPS/TLS), fijación de certificados (certificate pinning) hacia nuestro backend, claves de API no embebidas en la app y minimización de datos. Ningún sistema es 100&nbsp;% infalible, pero trabajamos para proteger tu información.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">10. Tus derechos</h2>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Acceder, rectificar o eliminar tus datos.</li>
+                        <li>Retirar tu consentimiento (revocar permisos de salud, ubicación o micrófono).</li>
+                        <li>Oponerte o limitar ciertos tratamientos y solicitar la portabilidad de tus datos.</li>
+                        <li>Presentar una reclamación ante tu autoridad de protección de datos.</li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        Para ejercer estos derechos (incluidos los del RGPD en la UE/EEE y la CCPA en California), escríbenos a <a href="mailto:aarjona1991@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">aarjona1991@gmail.com</a>.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">11. Transferencias internacionales</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Algunos proveedores (como Google) pueden procesar datos en servidores ubicados fuera de tu país. En esos casos se aplican las salvaguardas correspondientes previstas por dichos proveedores.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">12. Menores de edad</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Aethera no está dirigida a menores de 13 años (ni a menores de 16 en el EEE donde aplique). No recopilamos conscientemente datos de menores. Si crees que un menor nos ha proporcionado datos, contáctanos para eliminarlos.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">13. Cambios en esta política</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Podemos actualizar esta política. Publicaremos los cambios en esta misma URL y actualizaremos la fecha de "Última actualización". Los cambios significativos se comunicarán dentro de la app cuando corresponda.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">14. Contacto</h2>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Si tienes preguntas sobre esta política de privacidad o sobre el tratamiento de tus datos:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li><strong>Email:</strong> <a href="mailto:aarjona1991@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">aarjona1991@gmail.com</a></li>
+                            <li><strong>App:</strong> Aethera (<code>com.devguy.aethera</code>)</li>
+                            <li><strong>Términos de uso:</strong> <a href="/devguy/aethera/terms.html" class="text-blue-600 dark:text-blue-400 hover:underline">n33no.online/devguy/aethera/terms.html</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
+                            Esta política de privacidad es efectiva a partir del 28 de mayo de 2026.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
