@@ -27,6 +27,22 @@
     {
       "src": "/privacy-policy-en",
       "dest": "/public/privacy-policy-en.html"
+    },
+    {
+      "src": "/devguy/aethera/privacy",
+      "dest": "/public/devguy/aethera/privacy-policy.html"
+    },
+    {
+      "src": "/devguy/aethera/privacy-en",
+      "dest": "/public/devguy/aethera/privacy-policy-en.html"
+    },
+    {
+      "src": "/devguy/aethera/terms",
+      "dest": "/public/devguy/aethera/terms.html"
+    },
+    {
+      "src": "/devguy/aethera/terms-en",
+      "dest": "/public/devguy/aethera/terms-en.html"
     }
   ],
   "headers": [

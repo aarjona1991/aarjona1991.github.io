@@ -160,7 +160,7 @@ const PrivacyPolicyES = () => {
                             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                                 <li><strong>Email:</strong> aarjona1991@gmail.com</li>
                                 <li><strong>GitHub:</strong> <a href="https://github.com/aarjona1991" className="text-blue-600 dark:text-blue-400 hover:underline">@aarjona1991</a></li>
-                                <li><strong>Portfolio:</strong> <a href="/" className="text-blue-600 dark:text-blue-400 hover:underline">aarjona1991.github.io</a></li>
+                                <li><strong>Portfolio:</strong> <a href="/" className="text-blue-600 dark:text-blue-400 hover:underline">n33no.online</a></li>
                             </ul>
                         </div>
 

@@ -2,36 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aarjona1991.github.io/</loc>
+    <loc>https://n33no.online/</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aarjona1991.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aarjona1991.github.io/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://n33no.online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://n33no.online/?lang=es"/>
   </url>
   <url>
-    <loc>https://aarjona1991.github.io/?lang=es</loc>
+    <loc>https://n33no.online/?lang=es</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aarjona1991.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aarjona1991.github.io/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://n33no.online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://n33no.online/?lang=es"/>
   </url>
   <url>
-    <loc>https://aarjona1991.github.io/privacy-policy</loc>
+    <loc>https://n33no.online/privacy-policy</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aarjona1991.github.io/privacy-policy-es</loc>
+    <loc>https://n33no.online/privacy-policy-es</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aarjona1991.github.io/privacy-policy-en</loc>
+    <loc>https://n33no.online/privacy-policy-en</loc>
     <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://n33no.online/devguy/aethera/privacy-policy.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://n33no.online/devguy/aethera/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://n33no.online/devguy/aethera/privacy-policy-en.html"/>
+  </url>
+  <url>
+    <loc>https://n33no.online/devguy/aethera/privacy-policy-en.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://n33no.online/devguy/aethera/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://n33no.online/devguy/aethera/privacy-policy-en.html"/>
+  </url>
+  <url>
+    <loc>https://n33no.online/devguy/aethera/terms.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://n33no.online/devguy/aethera/terms-en.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
