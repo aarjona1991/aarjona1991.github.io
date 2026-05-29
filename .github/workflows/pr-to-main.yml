@@ -2,10 +2,14 @@
 name: PR Merge to Main
 
 on:
+  # NOTE: CI auto-triggers paused on purpose. Re-enable by uncommenting below.
   # Trigger when a PR is merged to main
-  pull_request:
-    types: [closed]
-    branches: [main]
+  # pull_request:
+  #   types: [closed]
+  #   branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   # Check if PR was merged (not just closed)

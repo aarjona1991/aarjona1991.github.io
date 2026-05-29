@@ -2,13 +2,14 @@
 name: Deploy Portfolio to GitHub Pages
 
 on:
+  # NOTE: CI auto-triggers paused on purpose. Re-enable by uncommenting below.
   # Runs on pushes targeting development or main branches
-  push:
-    branches: ["development", "main"]
-  
+  # push:
+  #   branches: ["development", "main"]
+  #
   # Runs on pull requests to development (build only)
-  pull_request:
-    branches: ["development"]
+  # pull_request:
+  #   branches: ["development"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

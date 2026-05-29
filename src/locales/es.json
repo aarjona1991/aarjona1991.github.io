@@ -23,7 +23,7 @@
     "titleHighlight": "Mí",
     "subtitle": "Apasionado por crear experiencias digitales excepcionales que combinan diseño elegante con funcionalidad robusta.",
     "storyTitle": "Mi Historia",
-    "storyText1": "Soy un desarrollador frontend apasionado con más de 3 años de experiencia creando aplicaciones web modernas y responsivas. Mi enfoque se centra en escribir código limpio, escalable y mantenible.",
+    "storyText1": "Soy un desarrollador frontend apasionado con más de 4 años de experiencia creando aplicaciones web modernas y responsivas. Mi enfoque se centra en escribir código limpio, escalable y mantenible.",
     "storyText2": "Me especializo en React, TypeScript y las últimas tecnologías frontend, siempre buscando nuevas formas de mejorar la experiencia del usuario y optimizar el rendimiento de las aplicaciones.",
     "mainTechnologies": "Tecnologías Principales",
     "experienceTitle": "Mi",
@@ -37,21 +37,21 @@
     "experiences": [
       {
         "year": "2024",
-        "title": "Desarrollador Frontend Senior",
-        "company": "Tech Solutions",
-        "description": "Liderando el desarrollo de aplicaciones React modernas y optimizando la experiencia de usuario."
+        "title": "Desarrollador Web Frontend",
+        "company": "Tata Consultancy Services",
+        "description": "Desarrollo y mantenimiento de interfaces web modernas y responsivas para clientes corporativos, dentro de equipos globales de ingeniería."
       },
       {
         "year": "2022",
         "title": "Desarrollador Frontend",
-        "company": "Digital Agency",
-        "description": "Desarrollando interfaces de usuario responsivas y componentes reutilizables."
+        "company": "Apuestes.com",
+        "description": "Desarrollo de frontends responsivos para una plataforma de apuestas deportivas y tipsters con datos y predicciones en tiempo real."
       },
       {
-        "year": "2020",
-        "title": "Desarrollador Junior",
-        "company": "Startup Inc",
-        "description": "Iniciando mi carrera en desarrollo frontend con HTML, CSS y JavaScript vanilla."
+        "year": "2018",
+        "title": "Desarrollador Frontend",
+        "company": "Sitios Agencia Digital",
+        "description": "Creación de sitios web personalizados y responsivos para clientes en una agencia de diseño web de Montevideo."
       }
     ]
   },
@@ -93,10 +93,12 @@
     "certifications": {
       "title": "Certificaciones",
       "list": [
-        "React Developer Certification",
-        "TypeScript Fundamentals",
-        "AWS Cloud Practitioner",
-        "Google UX Design Certificate"
+        "JavaScript Front-End (Talently)",
+        "JavaScript Back-End (Talently)",
+        "React JS (Talently)",
+        "Vue JS (Talently)",
+        "PHP (Talently)",
+        "Braze Certified Practitioner"
       ]
     }
   },
@@ -116,46 +118,11 @@
     },
     "items": [
       {
-        "title": "E-Commerce Platform",
-        "description": "Plataforma de comercio electrónico completa construida con React, TypeScript y Node.js. Incluye carrito de compras, pagos, gestión de usuarios y panel de administración.",
-        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+        "title": "Casa Trinidad Viva",
+        "description": "Sitio web de reservas, online y terminado, para una casa de huéspedes en el centro colonial de Trinidad, Cuba. Experiencia de una sola página con muestra de habitaciones, experiencias locales, flujo de reserva y SEO sólido (datos estructurados, Open Graph y metadatos multilingües).",
+        "technologies": ["React", "Vite", "Tailwind CSS", "SEO"],
         "category": "web",
         "featured": true
-      },
-      {
-        "title": "Task Management App",
-        "description": "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones push. Construida con Next.js y Socket.io.",
-        "technologies": ["Next.js", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS"],
-        "category": "web",
-        "featured": true
-      },
-      {
-        "title": "Weather Dashboard",
-        "description": "Dashboard meteorológico interactivo con mapas, gráficos y predicciones. Integra múltiples APIs meteorológicas y muestra datos en tiempo real.",
-        "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "Leaflet", "SCSS"],
-        "category": "web",
-        "featured": false
-      },
-      {
-        "title": "Portfolio Website",
-        "description": "Sitio web portfolio personal con diseño moderno, animaciones suaves y optimización SEO. Construido con React y desplegado en Vercel.",
-        "technologies": ["React", "Framer Motion", "Tailwind CSS", "Vercel", "SEO"],
-        "category": "web",
-        "featured": false
-      },
-      {
-        "title": "Mobile Banking App",
-        "description": "Aplicación móvil de banca con autenticación biométrica, transferencias seguras y gestión de cuentas. Desarrollada con React Native.",
-        "technologies": ["React Native", "Redux", "Firebase", "Biometric Auth", "JWT"],
-        "category": "mobile",
-        "featured": true
-      },
-      {
-        "title": "AI Chat Assistant",
-        "description": "Asistente de chat con inteligencia artificial que responde preguntas y ayuda con tareas. Integra OpenAI API y procesamiento de lenguaje natural.",
-        "technologies": ["React", "OpenAI API", "Node.js", "WebSocket", "NLP"],
-        "category": "ai",
-        "featured": false
       }
     ],
     "actions": {

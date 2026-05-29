@@ -102,8 +102,7 @@ const About = () => {
                                     { name: 'TypeScript', level: 90, color: 'from-blue-600 to-blue-800' },
                                     { name: 'Next.js', level: 85, color: 'from-gray-700 to-gray-900' },
                                     { name: 'Tailwind CSS', level: 95, color: 'from-cyan-400 to-blue-500' },
-                                    { name: 'JavaScript', level: 90, color: 'from-yellow-400 to-orange-500' },
-                                    { name: 'Node.js', level: 75, color: 'from-green-500 to-green-700' }
+                                    { name: 'JavaScript', level: 90, color: 'from-yellow-400 to-orange-500' }
                                 ].map((skill, index) => (
                                     <div key={index} className="space-y-2">
                                         <div className="flex justify-between items-center">
