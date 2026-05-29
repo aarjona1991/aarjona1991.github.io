@@ -9,3 +9,12 @@
 /privacy-policy    /privacy-policy.html    200
 /privacy-policy-es    /privacy-policy-es.html    200
 /privacy-policy-en    /privacy-policy-en.html    200
+
+# Aethera app (Google Play) legal pages — devguy/com.devguy.aethera
+/devguy/aethera/privacy    /devguy/aethera/privacy-policy.html    200
+/devguy/aethera/privacy-en    /devguy/aethera/privacy-policy-en.html    200
+/devguy/aethera/terms    /devguy/aethera/terms.html    200
+/devguy/aethera/terms-en    /devguy/aethera/terms-en.html    200
+
+# Backward-compatible redirects from the old /aethera/ path
+/aethera/*    /devguy/aethera/:splat    301
