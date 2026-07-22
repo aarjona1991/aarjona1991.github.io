@@ -1,0 +1,449 @@
+{
+  "site": {
+    "meta": {
+      "version": 1,
+      "defaultLanguage": "en",
+      "supportedLanguages": ["en", "es"],
+      "website": "https://n33no.online/",
+      "updatedAt": "2026-07-22T17:30:00.000Z"
+    },
+    "profile": {
+      "name": "Adrian",
+      "fullName": "Adrian Arjona Clavelo",
+      "title": "Frontend Developer",
+      "email": "aarjona1991@gmail.com",
+      "phone": null,
+      "location": "Montevideo, Uruguay",
+      "avatarUrl": "./images/me/portfolio_image_black_white.jpg",
+      "subtitle": {
+        "en": "Creating exceptional digital experiences",
+        "es": "Creando experiencias digitales excepcionales"
+      },
+      "description": {
+        "en": "Frontend Developer specialized in React, TypeScript and modern web technologies. Creating exceptional digital experiences.",
+        "es": "Desarrollador Frontend especializado en React, TypeScript y tecnologías web modernas. Creando experiencias digitales excepcionales."
+      }
+    },
+    "social": {
+      "github": "https://github.com/aarjona1991",
+      "linkedin": "https://linkedin.com/in/aarjona1991",
+      "twitter": null,
+      "email": "mailto:aarjona1991@gmail.com"
+    },
+    "stats": {
+      "projects": "50+",
+      "experience": "4+",
+      "satisfaction": "100%",
+      "availability": "24/7"
+    },
+    "mainTechnologies": {
+      "react": { "name": "React", "level": 95, "color": "from-blue-500 to-cyan-500", "order": 1 },
+      "typescript": { "name": "TypeScript", "level": 90, "color": "from-blue-600 to-blue-800", "order": 2 },
+      "nextjs": { "name": "Next.js", "level": 85, "color": "from-gray-700 to-gray-900", "order": 3 },
+      "tailwind": { "name": "Tailwind CSS", "level": 95, "color": "from-cyan-400 to-blue-500", "order": 4 },
+      "javascript": { "name": "JavaScript", "level": 90, "color": "from-yellow-400 to-orange-500", "order": 5 }
+    },
+    "experience": {
+      "exp_2024_tcs": {
+        "id": "exp_2024_tcs",
+        "year": "2024",
+        "company": "Tata Consultancy Services",
+        "technologies": ["React", "JavaScript", "HTML5", "CSS3"],
+        "order": 1,
+        "title": {
+          "en": "Frontend Web Developer",
+          "es": "Desarrollador Web Frontend"
+        },
+        "description": {
+          "en": "Building and maintaining modern, responsive web interfaces for enterprise clients as part of global engineering teams.",
+          "es": "Desarrollo y mantenimiento de interfaces web modernas y responsivas para clientes corporativos, dentro de equipos globales de ingeniería."
+        }
+      },
+      "exp_2022_apuestes": {
+        "id": "exp_2022_apuestes",
+        "year": "2022",
+        "company": "Apuestes.com",
+        "technologies": ["React", "JavaScript", "Responsive Design"],
+        "order": 2,
+        "title": {
+          "en": "Frontend Developer",
+          "es": "Desarrollador Frontend"
+        },
+        "description": {
+          "en": "Developed responsive frontends for a sports betting and tipster platform with real-time predictions and data.",
+          "es": "Desarrollo de frontends responsivos para una plataforma de apuestas deportivas y tipsters con datos y predicciones en tiempo real."
+        }
+      },
+      "exp_2018_sitios": {
+        "id": "exp_2018_sitios",
+        "year": "2018",
+        "company": "Sitios Agencia Digital",
+        "technologies": ["JavaScript", "CSS3", "Responsive Design"],
+        "order": 3,
+        "title": {
+          "en": "Frontend Developer",
+          "es": "Desarrollador Frontend"
+        },
+        "description": {
+          "en": "Built custom, responsive websites for clients at a Montevideo-based web design agency.",
+          "es": "Creación de sitios web personalizados y responsivos para clientes en una agencia de diseño web de Montevideo."
+        }
+      }
+    },
+    "skills": {
+      "frontend": {
+        "react": { "name": "React", "level": 95, "order": 1 },
+        "typescript": { "name": "TypeScript", "level": 90, "order": 2 },
+        "nextjs": { "name": "Next.js", "level": 85, "order": 3 },
+        "vuejs": { "name": "Vue.js", "level": 80, "order": 4 },
+        "javascript": { "name": "JavaScript", "level": 75, "order": 5 }
+      },
+      "styling": {
+        "css3": { "name": "CSS3", "level": 95, "order": 1 },
+        "tailwind": { "name": "Tailwind CSS", "level": 90, "order": 2 },
+        "sass": { "name": "SASS/SCSS", "level": 85, "order": 3 },
+        "figma": { "name": "Figma", "level": 80, "order": 4 },
+        "adobeXd": { "name": "Adobe XD", "level": 75, "order": 5 }
+      },
+      "tools": {
+        "git": { "name": "Git", "level": 90, "order": 1 },
+        "webpack": { "name": "Webpack", "level": 85, "order": 2 },
+        "vite": { "name": "Vite", "level": 80, "order": 3 },
+        "jest": { "name": "Jest", "level": 75, "order": 4 },
+        "cypress": { "name": "Cypress", "level": 70, "order": 5 },
+        "docker": { "name": "Docker", "level": 65, "order": 6 }
+      },
+      "backend": {
+        "postgresql": { "name": "PostgreSQL", "level": 80, "order": 1 },
+        "firebase": { "name": "Firebase", "level": 75, "order": 2 }
+      },
+      "soft": {
+        "communication": {
+          "level": 95,
+          "order": 1,
+          "name": { "en": "Communication", "es": "Comunicación" }
+        },
+        "teamwork": {
+          "level": 92,
+          "order": 2,
+          "name": { "en": "Teamwork", "es": "Trabajo en Equipo" }
+        },
+        "problemSolving": {
+          "level": 89,
+          "order": 3,
+          "name": { "en": "Problem Solving", "es": "Resolución de Problemas" }
+        },
+        "adaptability": {
+          "level": 86,
+          "order": 4,
+          "name": { "en": "Adaptability", "es": "Adaptabilidad" }
+        },
+        "creativity": {
+          "level": 83,
+          "order": 5,
+          "name": { "en": "Creativity", "es": "Creatividad" }
+        },
+        "leadership": {
+          "level": 80,
+          "order": 6,
+          "name": { "en": "Leadership", "es": "Liderazgo" }
+        }
+      }
+    },
+    "certifications": {
+      "js_frontend_talently": {
+        "order": 1,
+        "name": { "en": "JavaScript Front-End (Talently)", "es": "JavaScript Front-End (Talently)" }
+      },
+      "js_backend_talently": {
+        "order": 2,
+        "name": { "en": "JavaScript Back-End (Talently)", "es": "JavaScript Back-End (Talently)" }
+      },
+      "react_talently": {
+        "order": 3,
+        "name": { "en": "React JS (Talently)", "es": "React JS (Talently)" }
+      },
+      "vue_talently": {
+        "order": 4,
+        "name": { "en": "Vue JS (Talently)", "es": "Vue JS (Talently)" }
+      },
+      "php_talently": {
+        "order": 5,
+        "name": { "en": "PHP (Talently)", "es": "PHP (Talently)" }
+      },
+      "braze": {
+        "order": 6,
+        "name": { "en": "Braze Certified Practitioner", "es": "Braze Certified Practitioner" }
+      }
+    },
+    "projects": {
+      "casa_trinidad_viva": {
+        "id": "casa_trinidad_viva",
+        "category": "web",
+        "featured": true,
+        "published": true,
+        "order": 1,
+        "technologies": ["React", "Vite", "Tailwind CSS", "SEO"],
+        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=500&h=300&fit=crop&q=85",
+        "demoUrl": "https://casapatriciacubastay.com/",
+        "githubUrl": "",
+        "title": {
+          "en": "Casa Trinidad Viva",
+          "es": "Casa Trinidad Viva"
+        },
+        "description": {
+          "en": "Live booking website for a guesthouse in the colonial center of Trinidad, Cuba. Single-page experience with room showcase, local experiences, online reservation flow and strong SEO (structured data, Open Graph, multilingual metadata).",
+          "es": "Sitio web de reservas, online y terminado, para una casa de huéspedes en el centro colonial de Trinidad, Cuba. Experiencia de una sola página con muestra de habitaciones, experiencias locales, flujo de reserva y SEO sólido (datos estructurados, Open Graph y metadatos multilingües)."
+        }
+      }
+    },
+    "ui": {
+      "en": {
+        "navigation": {
+          "home": "Home",
+          "about": "About",
+          "skills": "Skills",
+          "projects": "Projects",
+          "contact": "Contact"
+        },
+        "hero": {
+          "greeting": "Hi, I'm",
+          "professions": {
+            "0": "Frontend Developer",
+            "1": "React Specialist",
+            "2": "UI/UX Designer",
+            "3": "Digital Experience Creator"
+          },
+          "contactButton": "Contact Me",
+          "projectsButton": "View Projects"
+        },
+        "about": {
+          "title": "About",
+          "titleHighlight": "Me",
+          "subtitle": "Passionate about creating exceptional digital experiences that combine elegant design with robust functionality.",
+          "storyTitle": "My Story",
+          "storyText1": "I'm a passionate frontend developer with over 4 years of experience creating modern and responsive web applications. My focus is on writing clean, scalable and maintainable code.",
+          "storyText2": "I specialize in React, TypeScript and the latest frontend technologies, always looking for new ways to improve user experience and optimize application performance.",
+          "mainTechnologies": "Main Technologies",
+          "experienceTitle": "My",
+          "experienceTitleHighlight": "Experience",
+          "stats": {
+            "projects": "Completed Projects",
+            "experience": "Years of Experience",
+            "satisfaction": "Client Satisfaction",
+            "availability": "Availability"
+          }
+        },
+        "skills": {
+          "title": "My",
+          "titleHighlight": "Skills",
+          "subtitle": "A diverse set of technologies and tools that allow me to create complete and efficient solutions.",
+          "categories": {
+            "frontend": { "title": "Frontend Development", "icon": "💻" },
+            "styling": { "title": "Styling & Design", "icon": "🎨" },
+            "tools": { "title": "Tools & Libraries", "icon": "🛠️" },
+            "backend": { "title": "Backend & Database", "icon": "⚙️" }
+          },
+          "softSkills": {
+            "title": "Soft",
+            "titleHighlight": "Skills",
+            "subtitle": "The interpersonal skills that help me work effectively in a team"
+          },
+          "certifications": {
+            "title": "Certifications"
+          }
+        },
+        "projects": {
+          "title": "My",
+          "titleHighlight": "Projects",
+          "subtitle": "A collection of projects that demonstrate my experience and passion for frontend development.",
+          "filters": {
+            "all": "All",
+            "web": "Web",
+            "mobile": "Mobile",
+            "ai": "AI/ML"
+          },
+          "cta": {
+            "text": "Interested in working together?",
+            "button": "Let's talk about your project"
+          },
+          "actions": {
+            "demo": "View Demo",
+            "code": "Code"
+          }
+        },
+        "contact": {
+          "title": "Contact",
+          "subtitle": "Have a project in mind? I'd love to hear about it. Let's work together to create something amazing.",
+          "info": {
+            "title": "Let's talk about your project",
+            "description": "I'm always interested in new challenges and opportunities. If you have an idea or project in mind, don't hesitate to contact me. I'll respond as soon as possible.",
+            "socialTitle": "Follow me on social media"
+          },
+          "form": {
+            "title": "Send me a message",
+            "fields": {
+              "name": "Name",
+              "email": "Email",
+              "subject": "Subject",
+              "message": "Message"
+            },
+            "placeholders": {
+              "name": "Your name",
+              "email": "your@email.com",
+              "subject": "How can I help you?",
+              "message": "Tell me about your project..."
+            },
+            "button": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully! I'll get back to you soon."
+          },
+          "labels": {
+            "email": "Email",
+            "phone": "Phone",
+            "location": "Location"
+          }
+        },
+        "footer": {
+          "description": "Frontend Developer passionate about creating exceptional digital experiences. Specialized in React, TypeScript and the latest web technologies.",
+          "quickLinks": "Quick Links",
+          "contact": "Contact",
+          "rights": "All rights reserved.",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Use"
+        },
+        "common": {
+          "backToTop": "Back to top",
+          "backToPortfolio": "Back to Portfolio",
+          "loading": "Loading...",
+          "error": "Error",
+          "success": "Success",
+          "featured": "Featured"
+        }
+      },
+      "es": {
+        "navigation": {
+          "home": "Inicio",
+          "about": "Sobre Mí",
+          "skills": "Habilidades",
+          "projects": "Proyectos",
+          "contact": "Contacto"
+        },
+        "hero": {
+          "greeting": "Hola, soy",
+          "professions": {
+            "0": "Desarrollador Frontend",
+            "1": "Especialista en React",
+            "2": "Diseñador UI/UX",
+            "3": "Creador de Experiencias Digitales"
+          },
+          "contactButton": "Contáctame",
+          "projectsButton": "Ver Proyectos"
+        },
+        "about": {
+          "title": "Sobre",
+          "titleHighlight": "Mí",
+          "subtitle": "Apasionado por crear experiencias digitales excepcionales que combinan diseño elegante con funcionalidad robusta.",
+          "storyTitle": "Mi Historia",
+          "storyText1": "Soy un desarrollador frontend apasionado con más de 4 años de experiencia creando aplicaciones web modernas y responsivas. Mi enfoque se centra en escribir código limpio, escalable y mantenible.",
+          "storyText2": "Me especializo en React, TypeScript y las últimas tecnologías frontend, siempre buscando nuevas formas de mejorar la experiencia del usuario y optimizar el rendimiento de las aplicaciones.",
+          "mainTechnologies": "Tecnologías Principales",
+          "experienceTitle": "Mi",
+          "experienceTitleHighlight": "Experiencia",
+          "stats": {
+            "projects": "Proyectos Completados",
+            "experience": "Años de Experiencia",
+            "satisfaction": "Satisfacción del Cliente",
+            "availability": "Disponibilidad"
+          }
+        },
+        "skills": {
+          "title": "Mis",
+          "titleHighlight": "Habilidades",
+          "subtitle": "Un conjunto diverso de tecnologías y herramientas que me permiten crear soluciones completas y eficientes.",
+          "categories": {
+            "frontend": { "title": "Frontend Development", "icon": "💻" },
+            "styling": { "title": "Styling & Design", "icon": "🎨" },
+            "tools": { "title": "Tools & Libraries", "icon": "🛠️" },
+            "backend": { "title": "Backend & Database", "icon": "⚙️" }
+          },
+          "softSkills": {
+            "title": "Habilidades",
+            "titleHighlight": "Blandas",
+            "subtitle": "Las habilidades interpersonales que me ayudan a trabajar efectivamente en equipo"
+          },
+          "certifications": {
+            "title": "Certificaciones"
+          }
+        },
+        "projects": {
+          "title": "Mis",
+          "titleHighlight": "Proyectos",
+          "subtitle": "Una colección de proyectos que demuestran mi experiencia y pasión por el desarrollo frontend.",
+          "filters": {
+            "all": "Todos",
+            "web": "Web",
+            "mobile": "Mobile",
+            "ai": "AI/ML"
+          },
+          "cta": {
+            "text": "¿Interesado en trabajar juntos?",
+            "button": "Hablemos de tu proyecto"
+          },
+          "actions": {
+            "demo": "Ver Demo",
+            "code": "Código"
+          }
+        },
+        "contact": {
+          "title": "Contacto",
+          "subtitle": "¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Trabajemos juntos para crear algo increíble.",
+          "info": {
+            "title": "Hablemos de tu proyecto",
+            "description": "Estoy siempre interesado en nuevos desafíos y oportunidades. Si tienes una idea o proyecto en mente, no dudes en contactarme. Responderé lo antes posible.",
+            "socialTitle": "Sígueme en redes sociales"
+          },
+          "form": {
+            "title": "Envíame un mensaje",
+            "fields": {
+              "name": "Nombre",
+              "email": "Email",
+              "subject": "Asunto",
+              "message": "Mensaje"
+            },
+            "placeholders": {
+              "name": "Tu nombre",
+              "email": "tu@email.com",
+              "subject": "¿En qué puedo ayudarte?",
+              "message": "Cuéntame sobre tu proyecto..."
+            },
+            "button": "Enviar Mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado correctamente! Te responderé pronto."
+          },
+          "labels": {
+            "email": "Email",
+            "phone": "Teléfono",
+            "location": "Ubicación"
+          }
+        },
+        "footer": {
+          "description": "Desarrollador Frontend apasionado por crear experiencias digitales excepcionales. Especializado en React, TypeScript y las últimas tecnologías web.",
+          "quickLinks": "Enlaces Rápidos",
+          "contact": "Contacto",
+          "rights": "Todos los derechos reservados.",
+          "privacy": "Política de Privacidad",
+          "terms": "Términos de Uso"
+        },
+        "common": {
+          "backToTop": "Volver arriba",
+          "backToPortfolio": "Volver al Portfolio",
+          "loading": "Cargando...",
+          "error": "Error",
+          "success": "Éxito",
+          "featured": "Destacado"
+        }
+      }
+    }
+  }
+}

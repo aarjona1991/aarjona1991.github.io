@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import { LanguageSwitcher } from '../../atoms';
 import { personalInfo } from '../../../../config/personalInfo';
+import { getchFirebaseData } from '../../../../connector/functions';
+import { useQuery } from '@tanstack/react-query';
 
 const Navigation = () => {
-    const { t } = useLanguage();
+    const { language } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    
+    const { data: navItemsData } = useQuery({
+        queryKey: ['navItems', language],
+        queryFn: () => getchFirebaseData(`site/ui/${language}/navigation`),
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,14 +24,6 @@ const Navigation = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const navItems = [
-        { id: 'home', label: t('navigation.home'), href: '#home' },
-        { id: 'about', label: t('navigation.about'), href: '#about' },
-        { id: 'skills', label: t('navigation.skills'), href: '#skills' },
-        { id: 'projects', label: t('navigation.projects'), href: '#projects' },
-        { id: 'contact', label: t('navigation.contact'), href: '#contact' },
-    ];
 
     const scrollToSection = (href: string) => {
         const element = document.querySelector(href);
@@ -56,18 +55,18 @@ const Navigation = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
-                            {navItems.map((item) => (
+                            {navItemsData && Object.entries(navItemsData).map(([key, value]: [string, any]) => (
                                 <a
-                                    key={item.id}
-                                    href={item.href}
-                                    onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
+                                    key={key}
+                                    href={`#${value.id}`}
+                                    onClick={(e) => { e.preventDefault(); scrollToSection(`#${value.id}`); }}
                                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                                        activeSection === item.id
+                                        activeSection === key
                                             ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                                             : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                                     }`}
                                 >
-                                    {item.label}
+                                    {value.name}
                                 </a>
                             ))}
                             <LanguageSwitcher />
@@ -96,7 +95,7 @@ const Navigation = () => {
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {navItems.map((item) => (
+                        {/* {navItemsData?.entries.forEach((item: any) => (
                             <a
                                 key={item.id}
                                 href={item.href}
@@ -105,7 +104,7 @@ const Navigation = () => {
                             >
                                 {item.label}
                             </a>
-                        ))}
+                        ))} */}
                         <div className="px-3 py-2">
                             <LanguageSwitcher />
                         </div>
