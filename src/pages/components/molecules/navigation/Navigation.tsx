@@ -13,8 +13,17 @@ const Navigation = () => {
     
     const { data: navItemsData } = useQuery({
         queryKey: ['navItems', language],
-        queryFn: () => getchFirebaseData(`site/ui/${language}/navigation`),
+        queryFn: () => getchFirebaseData(`site/${language}/navigation`),
+        gcTime: 1000 * 60 * 60 * 24, // 24 hours
     });
+
+    const navItems = (() => {
+        if (!navItemsData) return [];
+        const items = Array.isArray(navItemsData)
+            ? navItemsData
+            : Object.values(navItemsData);
+        return [...items].sort((a: any, b: any) => (a.order ?? 0) - (b.order ?? 0));
+    })();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,18 +64,18 @@ const Navigation = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
-                            {navItemsData && Object.entries(navItemsData).map(([key, value]: [string, any]) => (
+                            {navItems.map((item) => (
                                 <a
-                                    key={key}
-                                    href={`#${value.id}`}
-                                    onClick={(e) => { e.preventDefault(); scrollToSection(`#${value.id}`); }}
+                                    key={item.id}
+                                    href={`#${item.id}`}
+                                    onClick={(e) => { e.preventDefault(); scrollToSection(`#${item.id}`); }}
                                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                                        activeSection === key
+                                        activeSection === item.id
                                             ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                                             : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                                     }`}
                                 >
-                                    {value.name}
+                                    {item.name}
                                 </a>
                             ))}
                             <LanguageSwitcher />
@@ -95,16 +104,16 @@ const Navigation = () => {
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {/* {navItemsData?.entries.forEach((item: any) => (
+                        {navItems.map((item) => (
                             <a
                                 key={item.id}
-                                href={item.href}
-                                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
+                                href={`#${item.id}`}
+                                onClick={(e) => { e.preventDefault(); scrollToSection(`#${item.id}`); }}
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
                             >
-                                {item.label}
+                                {item.name}
                             </a>
-                        ))} */}
+                        ))}
                         <div className="px-3 py-2">
                             <LanguageSwitcher />
                         </div>
