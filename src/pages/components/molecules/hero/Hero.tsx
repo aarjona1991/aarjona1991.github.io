@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Avatar } from '../../atoms';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import { personalInfo } from '../../../../config/personalInfo';
-import { getchFirebaseData } from '../../../../connector/functions';
-import { useQuery } from '@tanstack/react-query';
+import useFirebaseDataHooks from './heroHooks';
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -11,51 +10,34 @@ const Hero = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
-    
-    const { data: textsData } = useQuery({
-        queryKey: ['texts', language],
-        queryFn: () => getchFirebaseData(`site/${language}/hero/professions`),
-        gcTime: 1000 * 60 * 60 * 24, // 24 hours
-    });
 
-    const { data: descriptionData } = useQuery({
-        queryKey: ['description', language],
-        queryFn: () => getchFirebaseData(`site/${language}/hero/description`),
-        gcTime: 1000 * 60 * 60 * 24, // 24 hours
-    });
-
-    const { data: greetingData } = useQuery({
-        queryKey: ['greeting', language],
-        queryFn: () => getchFirebaseData(`site/${language}/hero/greeting`),
-        gcTime: 1000 * 60 * 60 * 24, // 24 hours
-    });
-
-    const { data: contactButtonData } = useQuery({
-        queryKey: ['contactButton', language],
-        queryFn: () => getchFirebaseData(`site/${language}/hero/contactButton`),
-        gcTime: 1000 * 60 * 60 * 24, // 24 hours
-    });
-
-    const { data: projectsButtonData } = useQuery({
-        queryKey: ['projectsButton', language],
-        queryFn: () => getchFirebaseData(`site/${language}/hero/projectsButton`),
-        gcTime: 1000 * 60 * 60 * 24, // 24 hours
-    });
+    const {
+        nameData: { data: nameData },
+        fullNameData: { data: fullNameData },
+        textsData: { data: textsData },
+        descriptionData: { data: descriptionData },
+        greetingData: { data: greetingData },
+        contactButtonData: { data: contactButtonData },
+        projectsButtonData: { data: projectsButtonData },
+        socialLinksData: { data: socialLinksData }
+    } = useFirebaseDataHooks(language);
 
     useEffect(() => {
         setIsVisible(true);
         
         const typeWriter = () => {
-            if (currentIndex < textsData?.length) {
-                const currentTextToType = textsData[currentIndex];
-                if (currentText.length < currentTextToType.length) {
-                    setCurrentText(currentTextToType.slice(0, currentText.length + 1));
-                } else {
-                    setTimeout(() => {
-                        setCurrentText('');
-                        setCurrentIndex((prev) => (prev + 1) % textsData?.length);
-                    }, 2000);
-                }
+            if (!textsData?.length || currentIndex >= textsData.length) {
+                return;
+            }
+
+            const currentTextToType = textsData[currentIndex];
+            if (currentText.length < currentTextToType.length) {
+                setCurrentText(currentTextToType.slice(0, currentText.length + 1));
+            } else {
+                setTimeout(() => {
+                    setCurrentText('');
+                    setCurrentIndex((prev) => (prev + 1) % textsData.length);
+                }, 2000);
             }
         };
 
@@ -102,7 +84,7 @@ const Hero = () => {
                                     className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
                                     itemProp="name"
                                 >
-                                    {personalInfo.fullName}
+                                    {fullNameData}
                                 </span>
                             </h1>
                             
@@ -147,9 +129,9 @@ const Hero = () => {
 
                         {/* Social Links */}
                         <nav className="flex space-x-6" aria-label="Social media links">
-                            {personalInfo.social.github && (
+                            {socialLinksData?.github && (
                                 <a 
-                                    href={personalInfo.social.github} 
+                                    href={socialLinksData?.github} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -162,9 +144,9 @@ const Hero = () => {
                                 </a>
                             )}
                             
-                            {personalInfo.social.linkedin && (
+                            {socialLinksData?.linkedin && (
                                 <a 
-                                    href={personalInfo.social.linkedin} 
+                                    href={socialLinksData?.linkedin} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -177,9 +159,9 @@ const Hero = () => {
                                 </a>
                             )}
                             
-                            {personalInfo.social.email && (
+                            {socialLinksData?.email && (
                                 <a 
-                                    href={personalInfo.social.email} 
+                                    href={socialLinksData?.email} 
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                                     aria-label="Send email"
                                     itemProp="email"

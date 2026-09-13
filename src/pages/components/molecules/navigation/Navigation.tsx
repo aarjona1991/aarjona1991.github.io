@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import { LanguageSwitcher } from '../../atoms';
 import { personalInfo } from '../../../../config/personalInfo';
-import { getchFirebaseData } from '../../../../connector/functions';
+import { fetchFirebaseData } from '../../../../connector/functions';
 import { useQuery } from '@tanstack/react-query';
 
 const Navigation = () => {
@@ -13,7 +13,7 @@ const Navigation = () => {
     
     const { data: navItemsData } = useQuery({
         queryKey: ['navItems', language],
-        queryFn: () => getchFirebaseData(`site/${language}/navigation`),
+        queryFn: () => fetchFirebaseData(`site/${language}/navigation`),
         gcTime: 1000 * 60 * 60 * 24, // 24 hours
     });
 
