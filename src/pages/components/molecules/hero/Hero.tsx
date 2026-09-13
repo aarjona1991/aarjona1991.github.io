@@ -2,35 +2,48 @@ import React, { useEffect, useState } from 'react';
 import { Avatar } from '../../atoms';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import { personalInfo } from '../../../../config/personalInfo';
+import useFirebaseDataHooks from './heroHooks';
 
 const Hero = () => {
     const { t } = useLanguage();
+    const { language } = useLanguage();
     const [isVisible, setIsVisible] = useState(false);
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
-    
-    const texts = t('hero.professions');
+
+    const {
+        nameData: { data: nameData },
+        fullNameData: { data: fullNameData },
+        textsData: { data: textsData },
+        descriptionData: { data: descriptionData },
+        greetingData: { data: greetingData },
+        contactButtonData: { data: contactButtonData },
+        projectsButtonData: { data: projectsButtonData },
+        socialLinksData: { data: socialLinksData }
+    } = useFirebaseDataHooks(language);
 
     useEffect(() => {
         setIsVisible(true);
         
         const typeWriter = () => {
-            if (currentIndex < texts.length) {
-                const currentTextToType = texts[currentIndex];
-                if (currentText.length < currentTextToType.length) {
-                    setCurrentText(currentTextToType.slice(0, currentText.length + 1));
-                } else {
-                    setTimeout(() => {
-                        setCurrentText('');
-                        setCurrentIndex((prev) => (prev + 1) % texts.length);
-                    }, 2000);
-                }
+            if (!textsData?.length || currentIndex >= textsData.length) {
+                return;
+            }
+
+            const currentTextToType = textsData[currentIndex];
+            if (currentText.length < currentTextToType.length) {
+                setCurrentText(currentTextToType.slice(0, currentText.length + 1));
+            } else {
+                setTimeout(() => {
+                    setCurrentText('');
+                    setCurrentIndex((prev) => (prev + 1) % textsData.length);
+                }, 2000);
             }
         };
 
         const timer = setTimeout(typeWriter, 100);
         return () => clearTimeout(timer);
-    }, [currentText, currentIndex, texts]);
+    }, [currentText, currentIndex, textsData]);
 
     const scrollToContact = () => {
         const element = document.querySelector('#contact');
@@ -66,12 +79,12 @@ const Hero = () => {
                     <header className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                <span className="block text-gray-900 dark:text-white">{t('hero.greeting')}</span>
+                                <span className="block text-gray-900 dark:text-white">{greetingData}</span>
                                 <span 
                                     className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
                                     itemProp="name"
                                 >
-                                    {personalInfo.fullName}
+                                    {fullNameData}
                                 </span>
                             </h1>
                             
@@ -91,7 +104,7 @@ const Hero = () => {
                             className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
                             itemProp="description"
                         >
-                            {personalInfo.description}
+                            {descriptionData}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -99,7 +112,7 @@ const Hero = () => {
                                 onClick={scrollToContact}
                                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
                             >
-                                <span className="relative z-10">{t('hero.contactButton')}</span>
+                                <span className="relative z-10">{contactButtonData}</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </button>
                             
@@ -107,7 +120,7 @@ const Hero = () => {
                                 onClick={scrollToProjects}
                                 className="group px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-full transition-all duration-300 hover:border-blue-500 hover:text-blue-500 hover:scale-105 hover:shadow-lg"
                             >
-                                {t('hero.projectsButton')}
+                                {projectsButtonData}
                                 <svg className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -116,9 +129,9 @@ const Hero = () => {
 
                         {/* Social Links */}
                         <nav className="flex space-x-6" aria-label="Social media links">
-                            {personalInfo.social.github && (
+                            {socialLinksData?.github && (
                                 <a 
-                                    href={personalInfo.social.github} 
+                                    href={socialLinksData?.github} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -131,9 +144,9 @@ const Hero = () => {
                                 </a>
                             )}
                             
-                            {personalInfo.social.linkedin && (
+                            {socialLinksData?.linkedin && (
                                 <a 
-                                    href={personalInfo.social.linkedin} 
+                                    href={socialLinksData?.linkedin} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -146,9 +159,9 @@ const Hero = () => {
                                 </a>
                             )}
                             
-                            {personalInfo.social.email && (
+                            {socialLinksData?.email && (
                                 <a 
-                                    href={personalInfo.social.email} 
+                                    href={socialLinksData?.email} 
                                     className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
                                     aria-label="Send email"
                                     itemProp="email"

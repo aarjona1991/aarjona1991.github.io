@@ -1,6 +1,6 @@
 import { 
-    Navigation, 
-    Hero, 
+    Navigation,
+    Hero,
     About, 
     Skills, 
     Projects, 
@@ -18,8 +18,8 @@ const Home = () => {
             <Projects />
             <Contact />
             <Footer />
-        </>
-    );
-};
+            </>
+        );
+    }
 
 export { Home };
